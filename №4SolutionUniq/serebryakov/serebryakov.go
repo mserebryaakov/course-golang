@@ -14,17 +14,3 @@ func SolutionUniq(A []int) int {
 	}
 	return resultCount
 }
-
-func SolutionUniq2(A []int) int {
-	mapNumbers := make(map[int]int)
-	var resultCount int = 0
-	for _, num := range A {
-		mapNumbers[num] = mapNumbers[num] + 1
-	}
-	for _, num := range A {
-		if mapNumbers[num] == 1 {
-			resultCount++
-		}
-	}
-	return resultCount
-}
