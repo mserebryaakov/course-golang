@@ -1,0 +1,11 @@
+package main
+
+import (
+	"fmt"
+	"homework/serebryakov"
+)
+
+func main() {
+	inputArr := []int{1, 2, 3, 3, 3, 3, 2, 1, 1}
+	fmt.Println(serebryakov.SolutionUniq(inputArr))
+}
