@@ -1,6 +1,7 @@
 package main
 
 import (
+	"io/ioutil"
 	"log"
 	"net/http"
 
@@ -17,7 +18,12 @@ func main() {
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	log.Println("url " + r.URL.Path + " client " + r.RemoteAddr)
-	w.Header().Set("Access-Control-Allow-Origin", "*")
-	r.Write(w)
+	if r.Method == http.MethodPost {
+		body, err := ioutil.ReadAll(r.Body)
+		if err != nil {
+			log.Fatalf("Error read body: %s", err.Error())
+			return
+		}
+		w.Write(body)
+	}
 }
