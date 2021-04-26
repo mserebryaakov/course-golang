@@ -1,5 +1,6 @@
 package serebryakov
 
+//Поиск самой длинной последовательности нулей в двоичном представлении числа N
 func SolutionBinaryGap(N int) int {
 	var count int = 0
 	var result int = 0

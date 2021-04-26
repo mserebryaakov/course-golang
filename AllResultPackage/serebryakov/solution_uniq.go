@@ -1,5 +1,6 @@
 package serebryakov
 
+//Подсчет количества уникальных значений в массиве А
 func SolutionUniq(A []int) int {
 	mapNumbers := make(map[int]int)
 	var resultCount int = len(A)

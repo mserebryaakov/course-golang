@@ -17,6 +17,7 @@ func main() {
 	}
 }
 
+//Функция, обрабатывающая запрос "/"
 func handler(w http.ResponseWriter, r *http.Request) {
 	if r.Method == http.MethodPost {
 		body, err := ioutil.ReadAll(r.Body)
