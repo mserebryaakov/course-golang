@@ -14,6 +14,7 @@ type Data struct {
 	Price  string `json:"price"`
 }
 
+//Get запрос для https://www.binance.com/api/v3/ticker/price
 func runGet() *[]Data {
 	URL := "https://www.binance.com/api/v3/ticker/price"
 	resp, err := http.Get(URL)
